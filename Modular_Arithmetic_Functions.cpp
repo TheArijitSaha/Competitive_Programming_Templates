@@ -7,27 +7,25 @@
 
 /*MODULAR EXPONENTIATION*/
 
-ll po(ll _x_,llu _y_,llu _mod_)
-{
-	if(_y_==0)
+long long po(long long _x_, unsigned long long _y_, unsigned long long _mod_) {
+	if (_y_ == 0)
 		return 1;
-	ll _p_=po(_x_,_y_/2,_mod_)%_mod_;
-	_p_=(_p_*_p_)%_mod_;
-	return ((_y_&1)?(_x_*_p_)%_mod_:_p_);
+	long long _p_ = po(_x_, _y_ / 2, _mod_) % _mod_;
+	_p_ = (_p_ * _p_) % _mod_;
+	return ((_y_ & 1) ? (_x_ * _p_) % _mod_ : _p_);
 }
 
 /*MODULAR INVERSE*/
 
-ll mi(ll _a_,ll _mod_)
-{
-	return po(_a_,(llu)(_mod_-2),(llu)_mod_);
+long long mi(long long _a_, long long _mod_) {
+	return po(_a_, (unsigned long long)(_mod_ - 2), (unsigned long long)_mod_);
 }
 
 /*MODULAR BINOMIAL COEFFICIENTS nCr % (10e9+7)*/
 
 #define fu 2005
 #define MOD 1000000007
-ll C[fu][fu]={0};
+long long C[fu][fu] = {0};
 void co()
 {
 	C[0][0]=1;
