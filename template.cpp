@@ -33,7 +33,6 @@ template <class C> void setmax(C &a,C b){if(a<b)a=b;}
 template <class C> void printv(vector<C> vec,string end=" "){for(auto const&iter:vec)cout<<iter<<end;if(end!="\n")cout<<endl;}
 template <class C> void printv(set<C> setc,string end=" "){for(auto const&iter:setc)cout<<iter<<end;if(end!="\n")cout<<endl;}
 template <class C> void print(C A[],ll n,string end=" "){forz(iter,n)cout<<A[iter]<<end;if(end!="\n")cout<<endl;}
-//for(auto const&x:mp)
 
 class Solution
 {
